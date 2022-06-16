@@ -1,4 +1,6 @@
 /* your styles go here */
-.toolButton{
-    color: black;
+.mainPageImgTitle{
+    color: #555555;
+    position: relative;
+    left: 0.5rem;
 }

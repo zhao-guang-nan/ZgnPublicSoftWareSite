@@ -240,7 +240,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }while(false);
         }
-
+        //其他软件界面
+        if(event.srcElement.dataset.othersoftwarepagetype){
+            //处理页码的问题
+            let type=event.srcElement.dataset.othersoftwarepagetype;
+            do{
+                if(type==='otherSoftWarePageBefore'){
+                    goToBeforePage();
+                    break;
+                }
+                if(type==='otherSoftWarePageMiddle'){
+                    let pageIndex=parseInt(event.srcElement.innerHTML);
+                    changeWhichPageFunc(pageIndex);
+                    break;
+                }
+                if(type==='otherSoftWarePageAfter'){
+                    goToAfterPage();
+                    break;
+                }
+            }while(false);
+        }
+        
 
     });
 });

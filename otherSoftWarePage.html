@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Universal - All In 1 Template</title>
-    <meta name="description" content="">
+    <title>其他软件</title>
+    <meta name="description" content="其他软件">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Google fonts-->
@@ -19,14 +19,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -213,15 +205,22 @@
                 </ul>
               </div>
             </div>
+
+            <div class="col-lg-3 col-md-6">
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="Fur coat"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Fur coat</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
             </ul>
           </nav>
         </div>
@@ -244,28 +243,90 @@
     <script src="vendor/choices.js/public/assets/scripts/choices.js"></script>
     <script src="js/theme.js"></script>
     <script>
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
+      g_allPageItems=document.querySelectorAll(".col-lg-3");
+      //索引从1开始
+      g_currentPageIndex=1;
+      let softWareCount=g_allPageItems.length;
+      //更改每页显示的最多软件个数
+      g_onePageItemCount=8.0;
+      g_currentAllPageCount=Math.ceil(softWareCount/g_onePageItemCount)
+
+      //添加页码(页码只有1页就没必要显示了)
+      if(g_currentAllPageCount>1){
+        let pageNavigationObj=document.querySelector(".pagination");
+        let pageNavigationIndexArray=[]
+        for(let index=0;index<g_currentAllPageCount;index++){
+          pageNavigationIndexArray.push('<li class="page-item" data-otherSoftWarePageType="otherSoftWarePageMiddle"><a data-otherSoftWarePageType="otherSoftWarePageMiddle" class="page-link" href="#">'+(index+1)+'</a></li>')
+        }
+        //更改每页显示最大的页码数字
+        g_onePageShowCount=5.0;
+        g_allBigPageCount=Math.ceil(g_currentAllPageCount/g_onePageShowCount);
+        if(g_allBigPageCount>1)
+          pageNavigationObj.innerHTML='<li class="page-item" data-otherSoftWarePageType="otherSoftWarePageBefore"><a data-otherSoftWarePageType="otherSoftWarePageBefore" class="page-link" href="#" aria-label="Previous"><span data-otherSoftWarePageType="otherSoftWarePageBefore" aria-hidden="true">«</span></a></li>';
+        pageNavigationObj.innerHTML+= pageNavigationIndexArray.join('');
+        if(g_allBigPageCount>1)
+          pageNavigationObj.innerHTML+='<li class="page-item" data-otherSoftWarePageType="otherSoftWarePageAfter"><a data-otherSoftWarePageType="otherSoftWarePageAfter" class="page-link" href="#" aria-label="Next"><span data-otherSoftWarePageType="otherSoftWarePageAfter" aria-hidden="true">»</span></a></li>';
+        //默认选中第一个项目
+        g_allPageIndexItems=document.querySelectorAll('.page-item');
+        g_allPageIndexItems[g_allBigPageCount>1?1:0].classList.add('active');
+        //隐藏其他页码
+        if(g_allBigPageCount>1){
+            for(let index=g_onePageShowCount+1;index<g_allPageIndexItems.length-1;index++)
+                g_allPageIndexItems[index].hidden=true;//需要显示的话使用.removeAttribute("hidden");
+        }
+        //隐藏不该出现的项
+        for(let index=g_onePageItemCount;index<g_allPageItems.length;index++)
+            g_allPageItems[index].hidden=true;
+    }
+    //索引号从1开始
+    changeWhichPageFunc=function(pageIndex){
+        if(pageIndex<1 || pageIndex>window.g_currentAllPageCount)
+            return;
+        //处理所有显示项目
+        for(let index=0;index<window.g_allPageItems.length;index++)
+            window.g_allPageItems[index].hidden=true;
+        let showMaxPageCount=window.g_onePageItemCount*(pageIndex-1)+window.g_onePageItemCount;
+        showMaxPageCount=Math.min(showMaxPageCount,window.g_allPageItems.length);
+        for(let index=window.g_onePageItemCount*(pageIndex-1);index<showMaxPageCount;index++)
+            window.g_allPageItems[index].removeAttribute("hidden");
+       //处理显示页码的标签
+        if(window.g_allBigPageCount>1){ //出现标签
+          for(let index=1;index<window.g_allPageIndexItems.length-1;index++){
+              window.g_allPageIndexItems[index].hidden=true;
+              window.g_allPageIndexItems[index].classList.remove('active');
           }
-      }
-      // this is set to BootstrapTemple website as you cannot 
-      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-      // while using file:// protocol
-      // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+          let whichPage=Math.ceil(pageIndex/window.g_onePageShowCount);
+          let thePageStartIndex=whichPage*window.g_onePageShowCount-window.g_onePageShowCount+1;
+          showMaxPageCount=thePageStartIndex+window.g_onePageShowCount;
+          showMaxPageCount=Math.min(showMaxPageCount,window.g_allPageIndexItems.length-1);
+          //加1的原因是第一项不是
+          for(let index=thePageStartIndex;index<showMaxPageCount;index++){
+            window.g_allPageIndexItems[index].removeAttribute("hidden");
+            
+          }
+          window.g_allPageIndexItems[pageIndex].classList.add('active');
+
+
+        }else{
+          for(let index=0;index<window.g_allPageIndexItems.length;index++){
+              window.g_allPageIndexItems[index].classList.remove('active');
+          }
+          window.g_allPageIndexItems[pageIndex-1].classList.add('active');
+        }
+        window.g_currentPageIndex=pageIndex;
+    }
+    goToBeforePage=function(){
+       if(window.g_currentPageIndex===1)
+            return;
+        window.g_currentPageIndex-=1;
+        changeWhichPageFunc(window.g_currentPageIndex);
+    }
+    goToAfterPage=function(){
+       if(window.g_currentPageIndex===window.g_allPageIndexItems.length-2)
+            return;
+        window.g_currentPageIndex+=1;
+        changeWhichPageFunc(window.g_currentPageIndex);
+    }
       
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->

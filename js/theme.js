@@ -226,15 +226,16 @@ document.addEventListener("DOMContentLoaded", function () {
             let type=event.srcElement.dataset.selfstudypagetype;
             do{
                 if(type==='selfStudyPageBefore'){
-                    console.log('--1');
+                    goToBeforePage();
                     break;
                 }
                 if(type==='selfStudyPageMiddle'){
-                    changeWhichPageFunc(2);
+                    let pageIndex=parseInt(event.srcElement.innerHTML);
+                    changeWhichPageFunc(pageIndex);
                     break;
                 }
                 if(type==='selfStudyPageAfter'){
-                    console.log('--3');
+                    goToAfterPage();
                     break;
                 }
             }while(false);

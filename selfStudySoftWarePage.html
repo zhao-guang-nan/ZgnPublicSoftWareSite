@@ -88,7 +88,7 @@
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="12306抢票软件"></a></div>
                 <div class="py-4 px-3 text-center">
-                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件</a></h3>
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件1</a></h3>
                 </div>
                 <ul class="list-unstyled p-0 ribbon-holder mb-0">
                 </ul>
@@ -211,7 +211,7 @@
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="12306抢票软件"></a></div>
                 <div class="py-4 px-3 text-center">
-                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件</a></h3>
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件2</a></h3>
                 </div>
                 <ul class="list-unstyled p-0 ribbon-holder mb-0">
                 </ul>
@@ -334,7 +334,7 @@
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="12306抢票软件"></a></div>
                 <div class="py-4 px-3 text-center">
-                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件</a></h3>
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件3</a></h3>
                 </div>
                 <ul class="list-unstyled p-0 ribbon-holder mb-0">
                 </ul>
@@ -453,13 +453,6 @@
             </div>
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <!-- <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">4</a></li>
-              <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li> -->
             </ul>
           </nav>
         </div>
@@ -483,6 +476,8 @@
     <script src="js/theme.js"></script>
     <script>
       g_allPageItems=document.querySelectorAll(".col-lg-3");
+      //索引从1开始
+      g_currentPageIndex=1;
       let softWareCount=g_allPageItems.length;
       //更改每页显示的最多软件个数
       g_onePageItemCount=8.0;
@@ -496,7 +491,7 @@
           pageNavigationIndexArray.push('<li class="page-item" data-selfStudyPageType="selfStudyPageMiddle"><a data-selfStudyPageType="selfStudyPageMiddle" class="page-link" href="#">'+(index+1)+'</a></li>')
         }
         //更改每页显示最大的页码数字
-        g_onePageShowCount=2.0;
+        g_onePageShowCount=5.0;
         g_allBigPageCount=Math.ceil(g_currentAllPageCount/g_onePageShowCount);
         if(g_allBigPageCount>1)
           pageNavigationObj.innerHTML='<li class="page-item" data-selfStudyPageType="selfStudyPageBefore"><a data-selfStudyPageType="selfStudyPageBefore" class="page-link" href="#" aria-label="Previous"><span data-selfStudyPageType="selfStudyPageBefore" aria-hidden="true">«</span></a></li>';
@@ -515,15 +510,15 @@
         for(let index=g_onePageItemCount;index<g_allPageItems.length;index++)
             g_allPageItems[index].hidden=true;
     }
-    //索引号从0开始
+    //索引号从1开始
     changeWhichPageFunc=function(pageIndex){
-        if(pageIndex<1 || pageIndex>window.g_currentAllPageCount-1)
+        if(pageIndex<1 || pageIndex>window.g_currentAllPageCount)
             return;
         //处理所有显示项目
         for(let index=0;index<window.g_allPageItems.length;index++)
             window.g_allPageItems[index].hidden=true;
-        let showMaxPageCount=window.g_onePageItemCount*pageIndex+window.g_onePageItemCount;
-        for(let index=window.g_onePageItemCount*pageIndex;index<showMaxPageCount;index++)
+        let showMaxPageCount=window.g_onePageItemCount*(pageIndex-1)+window.g_onePageItemCount;
+        for(let index=window.g_onePageItemCount*(pageIndex-1);index<showMaxPageCount;index++)
             window.g_allPageItems[index].removeAttribute("hidden");
        //处理显示页码的标签
         if(window.g_allBigPageCount>1){ //出现标签
@@ -531,26 +526,38 @@
               window.g_allPageIndexItems[index].hidden=true;
               window.g_allPageIndexItems[index].classList.remove('active');
           }
-          let whichPage=Math.ceil((pageIndex+1)/window.g_onePageShowCount);
-          let thePageStartIndex=whichPage*window.g_onePageShowCount-window.g_onePageShowCount;
+          let whichPage=Math.ceil(pageIndex/window.g_onePageShowCount);
+          let thePageStartIndex=whichPage*window.g_onePageShowCount-window.g_onePageShowCount+1;
           showMaxPageCount=thePageStartIndex+window.g_onePageShowCount;
+          showMaxPageCount=Math.min(showMaxPageCount,window.g_allPageIndexItems.length-1);
           //加1的原因是第一项不是
-          for(let index=thePageStartIndex+1;index<showMaxPageCount;index++){
+          for(let index=thePageStartIndex;index<showMaxPageCount;index++){
             window.g_allPageIndexItems[index].removeAttribute("hidden");
             
           }
-          window.g_allPageIndexItems[pageIndex+1].classList.add('active');
+          window.g_allPageIndexItems[pageIndex].classList.add('active');
 
 
         }else{
-
-
+          for(let index=0;index<window.g_allPageIndexItems.length;index++){
+              window.g_allPageIndexItems[index].classList.remove('active');
+          }
+          window.g_allPageIndexItems[pageIndex-1].classList.add('active');
         }
-
-
+        window.g_currentPageIndex=pageIndex;
     }
-
-
+    goToBeforePage=function(){
+       if(window.g_currentPageIndex===1)
+            return;
+        window.g_currentPageIndex-=1;
+        changeWhichPageFunc(window.g_currentPageIndex);
+    }
+    goToAfterPage=function(){
+       if(window.g_currentPageIndex===window.g_allPageIndexItems.length-2)
+            return;
+        window.g_currentPageIndex+=1;
+        changeWhichPageFunc(window.g_currentPageIndex);
+    }
 
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->

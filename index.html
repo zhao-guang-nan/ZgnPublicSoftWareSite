@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GuangNan Site</title>
-    <meta name="description" content="">
+    <meta name="description" content="GuangNan Site">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Google fonts-->
@@ -19,14 +19,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -37,29 +29,31 @@
       <header class="nav-holder make-sticky">
         <div class="navbar navbar-light bg-white navbar-expand-lg py-0" id="navbar">
           <div class="container py-3 py-lg-0 px-lg-0">
-            <!-- Navbar brand--><a class="navbar-brand" href="index.html"><img class="d-none d-md-inline-block" src="img/logo.png" alt="guangnan site logo"><h4 class="mainPageImgTitle d-none d-md-inline-block">Zgn SoftWare</h4><h4 class="mainPageImgTitle d-inline-block d-md-none">Zgn SoftWare</h4><span class="sr-only">Universal - go to homepage</span></a>
+            <!-- Navbar brand--><a class="navbar-brand" href="index.html"><img class="d-none d-md-inline-block" src="img/logo.png" alt="guangnan site logo"><h4 class="mainPageImgTitle d-none d-md-inline-block">Zgn SoftWare</h4><h4 class="mainPageImgTitle d-inline-block d-md-none">Zgn SoftWare</h4></a>
             <!-- Navbar toggler-->
-            <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Toggle navigation</span><i class="fas fa-align-justify"></i></button>
+            <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-align-justify"></i></button>
             <!-- Collapsed Navigation    -->
             <div class="collapse navbar-collapse" id="navigationCollapse">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!-- software dropdown-->
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="hpDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">软件</a>
                   <ul class="dropdown-menu" aria-labelledby="hpDropdown">
-                    <li><a class="dropdown-item text-uppercase border-bottom" href="index.html">自研软件 </a></li>
-                    <li><a class="dropdown-item text-uppercase border-bottom" href="index2.html">其他软件</a></li>
+                    <li><a class="dropdown-item text-uppercase border-bottom" href="selfStudySoftWarePage.html">自研软件 </a></li>
+                    <li><a class="dropdown-item text-uppercase border-bottom" href="otherSoftWarePage.html">其他软件</a></li>
                   </ul>
                 </li>
                 <!-- megamenu [features]-->
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">教程</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="tutorialBlogPagemenu" href="tutorialBlogPage.html" role="button" aria-expanded="false">教程</a>
                 </li>
                 <!-- megamenu [portfolio]-->
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">历史</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="historyMenu" href="#" role="button" aria-expanded="false">历史</a>
+                </li>
+                <li class="nav-item menu-large"><a class="nav-link" id="logMenu" href="logPage.html" role="button" aria-expanded="false">日志</a>
                 </li>
                 <!-- megamenu [all pages]-->
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">技术支持</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="questionMenu" href="questionPage.html" role="button" aria-expanded="false">常见问题</a>
                 </li>
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">关于</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="aboutMenu" href="aboutPage.html" role="button" aria-expanded="false">关于</a>
                 </li>
               </ul>
             </div>
@@ -92,7 +86,6 @@
                 <!-- Hero Slide-->
                 <div class="swiper-slide h-auto mb-5">
                   <div class="row gy-5 h-100 align-items-center">
-                    <div class="col-lg-7"><video class="img-fluid" autoplay muted loop><source src="./img/163Video.mp4" type="video/mp4"></video></div>
                     <div class="col-lg-5">
                       <h1 class="text-uppercase">163邮件自动处理软件</h1>
                       <ul class="list-unstyled text-uppercase fw-bold mb-0">
@@ -104,6 +97,7 @@
                         <li class="mb-2"><p><a class="btn btn-outline-light" href="#packages">了解详情</a></p></li>
                       </ul>
                     </div>
+                    <div class="col-lg-7"><video class="img-fluid" autoplay muted loop><source src="./img/163Video.mp4" type="video/mp4"></video></div>
                   </div>
                 </div>
                 <!-- Hero Slide-->
@@ -125,7 +119,6 @@
                 <!-- Hero Slide-->
                 <div class="swiper-slide h-auto mb-5">
                   <div class="row gy-5 h-100 align-items-center">
-                    <div class="col-lg-7"><video class="img-fluid" autoplay muted loop><source src="./img/2DCAD.mp4" type="video/mp4"></video></div>
                     <div class="col-lg-5">
                       <h1 class="text-uppercase">基于QT实现的2D绘图SDK</h1>
                       <ul class="list-unstyled text-uppercase fw-bold mb-0">
@@ -134,6 +127,7 @@
                         <li class="mb-2"><p><a class="btn btn-outline-light" href="#packages">了解详情</a></p></li>
                       </ul>
                     </div>
+                    <div class="col-lg-7"><video class="img-fluid" autoplay muted loop><source src="./img/2DCAD.mp4" type="video/mp4"></video></div>
                   </div>
                 </div>
               </div>
@@ -276,31 +270,6 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/choices.js/public/assets/scripts/choices.js"></script>
     <script src="js/theme.js"></script>
-    <script>
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
-          }
-      }
-      // this is set to BootstrapTemple website as you cannot 
-      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-      // while using file:// protocol
-      // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-      
-    </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </body>

@@ -219,5 +219,27 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isClickInside) {
             closeAllSubmenus();
         }
+
+        //自研软件界面单击事件
+        if(event.srcElement.dataset.selfstudypagetype){
+            //处理页码的问题
+            let type=event.srcElement.dataset.selfstudypagetype;
+            do{
+                if(type==='selfStudyPageBefore'){
+                    console.log('--1');
+                    break;
+                }
+                if(type==='selfStudyPageMiddle'){
+                    changeWhichPageFunc(2);
+                    break;
+                }
+                if(type==='selfStudyPageAfter'){
+                    console.log('--3');
+                    break;
+                }
+            }while(false);
+        }
+
+
     });
 });

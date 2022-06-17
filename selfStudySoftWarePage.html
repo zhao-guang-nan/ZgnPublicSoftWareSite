@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Universal - All In 1 Template</title>
-    <meta name="description" content="">
+    <title>自研软件</title>
+    <meta name="description" content="自研软件">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Google fonts-->
@@ -19,14 +19,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon and apple touch icons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -37,9 +29,9 @@
       <header class="nav-holder make-sticky">
         <div class="navbar navbar-light bg-white navbar-expand-lg py-0" id="navbar">
           <div class="container py-3 py-lg-0 px-lg-0">
-            <!-- Navbar brand--><a class="navbar-brand" href="index.html"><img class="d-none d-md-inline-block" src="img/logo.png" alt="guangnan site logo"><h4 class="mainPageImgTitle d-none d-md-inline-block">Zgn SoftWare</h4><h4 class="mainPageImgTitle d-inline-block d-md-none">Zgn SoftWare</h4><span class="sr-only">Universal - go to homepage</span></a>
+            <!-- Navbar brand--><a class="navbar-brand" href="index.html"><img class="d-none d-md-inline-block" src="img/logo.png" alt="guangnan site logo"><h4 class="mainPageImgTitle d-none d-md-inline-block">Zgn SoftWare</h4><h4 class="mainPageImgTitle d-inline-block d-md-none">Zgn SoftWare</h4></a>
             <!-- Navbar toggler-->
-            <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="sr-only">Toggle navigation</span><i class="fas fa-align-justify"></i></button>
+            <button class="navbar-toggler text-primary border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-align-justify"></i></button>
             <!-- Collapsed Navigation    -->
             <div class="collapse navbar-collapse" id="navigationCollapse">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -47,19 +39,21 @@
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="hpDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">软件</a>
                   <ul class="dropdown-menu" aria-labelledby="hpDropdown">
                     <li><a class="dropdown-item text-uppercase border-bottom" href="selfStudySoftWarePage.html">自研软件 </a></li>
-                    <li><a class="dropdown-item text-uppercase border-bottom" href="index2.html">其他软件</a></li>
+                    <li><a class="dropdown-item text-uppercase border-bottom" href="otherSoftWarePage.html">其他软件</a></li>
                   </ul>
                 </li>
                 <!-- megamenu [features]-->
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">教程</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="tutorialBlogPagemenu" href="tutorialBlogPage.html" role="button" aria-expanded="false">教程</a>
                 </li>
                 <!-- megamenu [portfolio]-->
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">历史</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="historyMenu" href="#" role="button" aria-expanded="false">历史</a>
+                </li>
+                <li class="nav-item menu-large"><a class="nav-link" id="logMenu" href="logPage.html" role="button" aria-expanded="false">日志</a>
                 </li>
                 <!-- megamenu [all pages]-->
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">技术支持</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="questionMenu" href="questionPage.html" role="button" aria-expanded="false">常见问题</a>
                 </li>
-                <li class="nav-item menu-large"><a class="nav-link" id="featuresMegamenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">关于</a>
+                <li class="nav-item menu-large"><a class="nav-link" id="aboutMenu" href="aboutPage.html" role="button" aria-expanded="false">关于</a>
                 </li>
               </ul>
             </div>
@@ -89,20 +83,18 @@
         <div class="container py-4">
           <p class="text-muted lead text-center mb-5">此页面下的所有软件都是自己从0-1所编写的，因此会一直处于维护的状态，如果出现bug，也会修复得比较快。</p>
           <div class="row gy-5 align-items-stretch">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
-                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="Fur coat with very but very very long name"></a></div>
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="12306抢票软件"></a></div>
                 <div class="py-4 px-3 text-center">
-                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Fur coat with very but very very long name</a></h3>
-                  <p class="mb-0">$143.00
-                  </p>
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件</a></h3>
                 </div>
                 <ul class="list-unstyled p-0 ribbon-holder mb-0">
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product2.jpg" alt="White Blouse Armani"></a></div>
@@ -122,7 +114,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product3.jpg" alt="Black Blouse Versace"></a></div>
@@ -135,7 +127,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product4.jpg" alt="Black Blouse Versace"></a></div>
@@ -148,7 +140,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product3.jpg" alt=" White Blouse Armani"></a></div>
@@ -168,7 +160,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product4.jpg" alt="White Blouse Versace"></a></div>
@@ -184,7 +176,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product2.jpg" alt="White Blouse Versace"></a></div>
@@ -200,7 +192,253 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="Fur coat"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Fur coat</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="12306抢票软件"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件</a></h3>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product2.jpg" alt="White Blouse Armani"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">White Blouse Armani</a></h3>
+                  <p class="mb-0">
+                    <del class="text-gray-500 me-2">$200.00</del>$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon sale ribbon-primary">SALE</div>
+                  </li>
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product3.jpg" alt="Black Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Black Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product4.jpg" alt="Black Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Black Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product3.jpg" alt=" White Blouse Armani"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html"> White Blouse Armani</a></h3>
+                  <p class="mb-0">
+                    <del class="text-gray-500 me-2">$200.00</del>$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon sale ribbon-primary">SALE</div>
+                  </li>
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product4.jpg" alt="White Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">White Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product2.jpg" alt="White Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">White Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="Fur coat"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Fur coat</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="12306抢票软件"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">12306抢票软件</a></h3>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product2.jpg" alt="White Blouse Armani"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">White Blouse Armani</a></h3>
+                  <p class="mb-0">
+                    <del class="text-gray-500 me-2">$200.00</del>$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon sale ribbon-primary">SALE</div>
+                  </li>
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product3.jpg" alt="Black Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Black Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product4.jpg" alt="Black Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">Black Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product3.jpg" alt=" White Blouse Armani"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html"> White Blouse Armani</a></h3>
+                  <p class="mb-0">
+                    <del class="text-gray-500 me-2">$200.00</del>$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon sale ribbon-primary">SALE</div>
+                  </li>
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product4.jpg" alt="White Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">White Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
+              <!-- Product-->
+              <div class="product h-100">
+                <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product2.jpg" alt="White Blouse Versace"></a></div>
+                <div class="py-4 px-3 text-center">
+                  <h3 class="h5 text-uppercase mb-3"><a class="reset-link" href="shop-detail.html">White Blouse Versace</a></h3>
+                  <p class="mb-0">$143.00
+                  </p>
+                </div>
+                <ul class="list-unstyled p-0 ribbon-holder mb-0">
+                  <li class="mb-1">
+                    <div class="ribbon new ribbon-info">NEW</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" >
               <!-- Product-->
               <div class="product h-100">
                 <div class="product-image"><a href="shop-detail.html"><img class="img-fluid" src="img/product1.jpg" alt="Fur coat"></a></div>
@@ -215,13 +453,13 @@
             </div>
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+              <!-- <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
               <li class="page-item active"><a class="page-link" href="#">1</a></li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item"><a class="page-link" href="#">4</a></li>
               <li class="page-item"><a class="page-link" href="#">5</a></li>
-              <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li> -->
             </ul>
           </nav>
         </div>
@@ -244,29 +482,76 @@
     <script src="vendor/choices.js/public/assets/scripts/choices.js"></script>
     <script src="js/theme.js"></script>
     <script>
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
+      g_allPageItems=document.querySelectorAll(".col-lg-3");
+      let softWareCount=g_allPageItems.length;
+      //更改每页显示的最多软件个数
+      g_onePageItemCount=8.0;
+      g_currentAllPageCount=Math.ceil(softWareCount/g_onePageItemCount)
+
+      //添加页码(页码只有1页就没必要显示了)
+      if(g_currentAllPageCount>1){
+        let pageNavigationObj=document.querySelector(".pagination");
+        let pageNavigationIndexArray=[]
+        for(let index=0;index<g_currentAllPageCount;index++){
+          pageNavigationIndexArray.push('<li class="page-item" data-selfStudyPageType="selfStudyPageMiddle"><a data-selfStudyPageType="selfStudyPageMiddle" class="page-link" href="#">'+(index+1)+'</a></li>')
+        }
+        //更改每页显示最大的页码数字
+        g_onePageShowCount=2.0;
+        g_allBigPageCount=Math.ceil(g_currentAllPageCount/g_onePageShowCount);
+        if(g_allBigPageCount>1)
+          pageNavigationObj.innerHTML='<li class="page-item" data-selfStudyPageType="selfStudyPageBefore"><a data-selfStudyPageType="selfStudyPageBefore" class="page-link" href="#" aria-label="Previous"><span data-selfStudyPageType="selfStudyPageBefore" aria-hidden="true">«</span></a></li>';
+        pageNavigationObj.innerHTML+= pageNavigationIndexArray.join('');
+        if(g_allBigPageCount>1)
+          pageNavigationObj.innerHTML+='<li class="page-item" data-selfStudyPageType="selfStudyPageAfter"><a data-selfStudyPageType="selfStudyPageAfter" class="page-link" href="#" aria-label="Next"><span data-selfStudyPageType="selfStudyPageAfter" aria-hidden="true">»</span></a></li>';
+        //默认选中第一个项目
+        g_allPageIndexItems=document.querySelectorAll('.page-item');
+        g_allPageIndexItems[g_allBigPageCount>1?1:0].classList.add('active');
+        //隐藏其他页码
+        if(g_allBigPageCount>1){
+            for(let index=g_onePageShowCount+1;index<g_allPageIndexItems.length-1;index++)
+                g_allPageIndexItems[index].hidden=true;//需要显示的话使用.removeAttribute("hidden");
+        }
+        //隐藏不该出现的项
+        for(let index=g_onePageItemCount;index<g_allPageItems.length;index++)
+            g_allPageItems[index].hidden=true;
+    }
+    //索引号从0开始
+    changeWhichPageFunc=function(pageIndex){
+        if(pageIndex<1 || pageIndex>window.g_currentAllPageCount-1)
+            return;
+        //处理所有显示项目
+        for(let index=0;index<window.g_allPageItems.length;index++)
+            window.g_allPageItems[index].hidden=true;
+        let showMaxPageCount=window.g_onePageItemCount*pageIndex+window.g_onePageItemCount;
+        for(let index=window.g_onePageItemCount*pageIndex;index<showMaxPageCount;index++)
+            window.g_allPageItems[index].removeAttribute("hidden");
+       //处理显示页码的标签
+        if(window.g_allBigPageCount>1){ //出现标签
+          for(let index=1;index<window.g_allPageIndexItems.length-1;index++){
+              window.g_allPageIndexItems[index].hidden=true;
+              window.g_allPageIndexItems[index].classList.remove('active');
           }
-      }
-      // this is set to BootstrapTemple website as you cannot 
-      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-      // while using file:// protocol
-      // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-      
+          let whichPage=Math.ceil((pageIndex+1)/window.g_onePageShowCount);
+          let thePageStartIndex=whichPage*window.g_onePageShowCount-window.g_onePageShowCount;
+          showMaxPageCount=thePageStartIndex+window.g_onePageShowCount;
+          //加1的原因是第一项不是
+          for(let index=thePageStartIndex+1;index<showMaxPageCount;index++){
+            window.g_allPageIndexItems[index].removeAttribute("hidden");
+            
+          }
+          window.g_allPageIndexItems[pageIndex+1].classList.add('active');
+
+
+        }else{
+
+
+        }
+
+
+    }
+
+
+
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">

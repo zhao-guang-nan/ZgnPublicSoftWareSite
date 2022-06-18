@@ -239,6 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 }
             }while(false);
+            return;
         }
         //其他软件界面
         if(event.srcElement.dataset.othersoftwarepagetype){
@@ -259,6 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 }
             }while(false);
+            return;
         }
         //教程界面
         if(event.srcElement.dataset.turorialpagetype){
@@ -279,7 +281,50 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
                 }
             }while(false);
+            return;
         }        
-
+        //日志界面
+        if(event.srcElement.dataset.logpagetype){
+            //处理页码的问题
+            let type=event.srcElement.dataset.logpagetype;
+            do{
+                if(type==='logPageBefore'){
+                    goToBeforePage();
+                    break;
+                }
+                if(type==='logPageMiddle'){
+                    let pageIndex=parseInt(event.srcElement.innerHTML);
+                    changeWhichPageFunc(pageIndex);
+                    break;
+                }
+                if(type==='logPageAfter'){
+                    goToAfterPage();
+                    break;
+                }
+            }while(false);
+            return;
+        }   
+        //常见问题界面p
+        if(event.srcElement.dataset.questionpagetype){
+            //处理页码的问题
+            let type=event.srcElement.dataset.questionpagetype;
+            do{
+                if(type==='questionPageBefore'){
+                    goToBeforePage();
+                    break;
+                }
+                if(type==='questionPageMiddle'){
+                    let pageIndex=parseInt(event.srcElement.innerHTML);
+                    changeWhichPageFunc(pageIndex);
+                    break;
+                }
+                if(type==='questionPageAfter'){
+                    goToAfterPage();
+                    break;
+                }
+            }while(false);
+            return;
+        }   
+        
     });
 });

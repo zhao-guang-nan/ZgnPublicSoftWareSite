@@ -486,7 +486,7 @@
       //添加页码(页码只有1页就没必要显示了)
       if(g_currentAllPageCount>1){
         let pageNavigationObj=document.querySelector(".pagination");
-        let pageNavigationIndexArray=[]
+        let pageNavigationIndexArray=[];
         for(let index=0;index<g_currentAllPageCount;index++){
           pageNavigationIndexArray.push('<li class="page-item" data-selfStudyPageType="selfStudyPageMiddle"><a data-selfStudyPageType="selfStudyPageMiddle" class="page-link" href="#">'+(index+1)+'</a></li>')
         }

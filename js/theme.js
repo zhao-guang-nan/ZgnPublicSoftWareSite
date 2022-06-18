@@ -260,7 +260,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }while(false);
         }
-        
+        //教程界面
+        if(event.srcElement.dataset.turorialpagetype){
+            //处理页码的问题
+            let type=event.srcElement.dataset.turorialpagetype;
+            do{
+                if(type==='turorialPageBefore'){
+                    goToBeforePage();
+                    break;
+                }
+                if(type==='turorialPageMiddle'){
+                    let pageIndex=parseInt(event.srcElement.innerHTML);
+                    changeWhichPageFunc(pageIndex);
+                    break;
+                }
+                if(type==='turorialPageAfter'){
+                    goToAfterPage();
+                    break;
+                }
+            }while(false);
+        }        
 
     });
 });

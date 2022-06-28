@@ -88,9 +88,11 @@
               <p class="lead">在自己的工程中，把<strong>include</strong>添加到库文件，<strong>lib</strong>也添加到链接上，然后使用SDK的接口就可以了。</p>
               <h3>1.2、接口说明</h3>
               <hr>
-              <code class="h3">inline const QList&lt;OneElementInfo&gt; &amp;GetElemetList()const :</code>
-              <p class="lead">获取显示的元素的对象，这些对象中包含元素的详细的信息，具体查看每个接口的说明。</p>
-              <p class="lead"></p>              
+              <code class="h3">CTsAbstractItem::CTsAbstractItemPtrList GetCurrentSelectItems()const :</code>
+              <p class="lead">获取选择的元素，返回元素对象的列表。</p>             
+              <hr>
+              <code class="h3">CTsAbstractItem::CTsAbstractItemPtr AddOnePointItem(const QPointF &coordinate) :</code>
+              <p class="lead">添加一个点元素，返回点的对象。</p>                
               <hr>
             </div>
           </div>
